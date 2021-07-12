@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages{
+        stage("Multibranch_Example"){
+            steps{
+                echo 'In Master branch'
+            }
+        }
+    }
+}
