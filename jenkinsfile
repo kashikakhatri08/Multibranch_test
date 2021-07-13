@@ -2,9 +2,16 @@ pipeline {
     agent any
     options { overrideIndexTriggers(true) }
     stages{
-        stage("Multibranch_Example"){
-            steps{
-                echo 'In master branch'
+        stage('1') {
+            steps {
+                echo 'stge 1'
+            }
+        }
+        stage('2') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                    echo 'stge 1'
+                }
             }
         }
     }
