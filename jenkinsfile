@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("Multibranch_Example"){
             steps{
-                echo 'In Master branch'
+                echo 'In master branch'
             }
         }
     }
